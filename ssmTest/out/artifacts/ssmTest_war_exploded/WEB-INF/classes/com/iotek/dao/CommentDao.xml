@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.iotek.dao.CommentDao">
+    <insert id="addComment">
+        <selectKey keyProperty="id" order="AFTER" resultType="integer">
+            SELECT last_insert_id()
+        </selectKey>
+        insert into comment(name, content, uid)
+        values (#{name},#{content},#{uid})
+    </insert>
+    <update id="updateComment">
+        update comment
+        set name=#{name},content=#{content},uid=#{uid}
+        where id=#{id}
+    </update>
+    <delete id="delComment">
+        delete from comment where id=#{id}
+    </delete>
+    <select id="getIdComment" resultType="com.iotek.model.Comment">
+        select * from comment where id=#{id}
+    </select>
+    <select id="getUserComment" resultType="com.iotek.model.Comment">
+        select * from comment where uid=#{uid}
+    </select>
+    <select id="getComment" resultType="com.iotek.model.Comment">
+        select * from comment
+    </select>
+</mapper>

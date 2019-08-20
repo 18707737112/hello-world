@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="testMaven:Web exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3d816d55-3ef0-43b7-be2c-8037b33e4ed1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Oracle/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Oracle/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sshTest/.idea/artifacts/sshTest_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sshTest/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sshTest/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sshTest/.idea/libraries/lib.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sshTest/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sshTest/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sshTest/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sshTest/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sshTest/src/bean.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sshTest/src/com/iotek/dao/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sshTest/src/com/iotek/dao/UserDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sshTest/src/com/iotek/filter/TestInp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sshTest/src/com/iotek/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sshTest/src/com/iotek/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sshTest/src/com/iotek/service/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sshTest/src/db.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sshTest/src/springMVC-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sshTest/sshTest.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sshTest/web/WEB-INF/lib/antlr-2.7.7.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sshTest/web/WEB-INF/lib/aopalliance-1.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sshTest/web/WEB-INF/lib/aspectj-1.8.6.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sshTest/web/WEB-INF/lib/aspectjrt-1.8.6.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sshTest/web/WEB-INF/lib/aspectjweaver-1.8.6.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sshTest/web/WEB-INF/lib/commons-logging-1.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sshTest/web/WEB-INF/lib/dom4j-1.6.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sshTest/web/WEB-INF/lib/hibernate-commons-annotations-4.0.2.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sshTest/web/WEB-INF/lib/hibernate-core-4.2.21.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sshTest/web/WEB-INF/lib/hibernate-jpa-2.0-api-1.0.1.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sshTest/web/WEB-INF/lib/javassist-3.18.1-GA.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sshTest/web/WEB-INF/lib/jboss-logging-3.1.0.GA.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sshTest/web/WEB-INF/lib/jboss-transaction-api_1.1_spec-1.0.1.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sshTest/web/WEB-INF/lib/mysql-connector-java-5.1.40-bin.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sshTest/web/WEB-INF/lib/spring-aop-4.2.6.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sshTest/web/WEB-INF/lib/spring-aspects-4.2.6.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sshTest/web/WEB-INF/lib/spring-beans-4.2.6.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sshTest/web/WEB-INF/lib/spring-context-4.2.6.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sshTest/web/WEB-INF/lib/spring-context-support-4.2.6.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sshTest/web/WEB-INF/lib/spring-core-4.2.6.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sshTest/web/WEB-INF/lib/spring-expression-4.2.6.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sshTest/web/WEB-INF/lib/spring-instrument-4.2.6.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sshTest/web/WEB-INF/lib/spring-instrument-tomcat-4.2.6.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sshTest/web/WEB-INF/lib/spring-jdbc-4.2.6.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sshTest/web/WEB-INF/lib/spring-orm-4.2.6.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sshTest/web/WEB-INF/lib/spring-tx-4.2.6.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sshTest/web/WEB-INF/lib/spring-web-4.2.6.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sshTest/web/WEB-INF/lib/spring-webmvc-4.2.6.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sshTest/web/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/.idea/libraries/lib.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/src/bean.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/src/com/iotek/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/src/com/iotek/dao/CommentDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/src/com/iotek/dao/CommentDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/src/com/iotek/dao/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/src/com/iotek/dao/UserDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/src/com/iotek/filter/TestInp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/src/com/iotek/model/Comment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/src/com/iotek/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/src/com/iotek/service/CommentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/src/com/iotek/service/CommentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/src/com/iotek/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/src/com/iotek/service/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/src/db.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/src/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/src/mybatisConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/src/springMVC-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/web/WEB-INF/lib/aopalliance-1.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/web/WEB-INF/lib/asm-3.3.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/web/WEB-INF/lib/aspectj-1.8.6.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/web/WEB-INF/lib/aspectjrt-1.8.6.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/web/WEB-INF/lib/aspectjweaver-1.8.6.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/web/WEB-INF/lib/cglib-2.2.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/web/WEB-INF/lib/commons-logging-1.1.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/web/WEB-INF/lib/jackson-annotations-2.2.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/web/WEB-INF/lib/jackson-core-2.2.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/web/WEB-INF/lib/jackson-core-asl-1.8.8.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/web/WEB-INF/lib/jackson-databind-2.2.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/web/WEB-INF/lib/jackson-mapper-asl-1.8.8.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/web/WEB-INF/lib/jackson-module-jaxb-annotations-2.2.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/web/WEB-INF/lib/javassist-3.17.1-GA.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/web/WEB-INF/lib/jstl.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/web/WEB-INF/lib/junit-4.9.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/web/WEB-INF/lib/log4j-1.2.17.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/web/WEB-INF/lib/log4j-api-2.0-rc1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/web/WEB-INF/lib/log4j-core-2.0-rc1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/web/WEB-INF/lib/mybatis-3.2.7.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/web/WEB-INF/lib/mybatis-spring-1.2.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/web/WEB-INF/lib/mysql-connector-java-5.1.40-bin.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/web/WEB-INF/lib/ojdbc6.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/web/WEB-INF/lib/slf4j-api-1.7.5.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/web/WEB-INF/lib/slf4j-log4j12-1.7.5.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/web/WEB-INF/lib/spring-aop-4.2.6.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/web/WEB-INF/lib/spring-aspects-4.2.6.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/web/WEB-INF/lib/spring-beans-4.2.6.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/web/WEB-INF/lib/spring-context-4.2.6.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/web/WEB-INF/lib/spring-context-support-4.2.6.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/web/WEB-INF/lib/spring-core-4.2.6.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/web/WEB-INF/lib/spring-expression-4.2.6.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/web/WEB-INF/lib/spring-instrument-4.2.6.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/web/WEB-INF/lib/spring-instrument-tomcat-4.2.6.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/web/WEB-INF/lib/spring-jdbc-4.2.6.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/web/WEB-INF/lib/spring-orm-4.2.6.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/web/WEB-INF/lib/spring-test-4.2.6.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/web/WEB-INF/lib/spring-tx-4.2.6.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/web/WEB-INF/lib/spring-web-4.2.6.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/web/WEB-INF/lib/spring-webmvc-4.2.6.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/web/WEB-INF/lib/standard.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/web/WEB-INF/page/main.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ssmTest/web/js/jquery-1.7.2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/testMaven_Web_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/index.jsp" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1571067362">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="jsp" value="1" />
+          <entry key="xml" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JSP" value="1" />
+          <entry key="XML" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="jsp" value="10" />
+          <entry key="xml" value="18" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JSP" value="10" />
+          <entry key="XML" value="18" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="58" column="21" lean-forward="true" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapp/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="19" selection-start-line="19" selection-end-line="19" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/webapp/WEB-INF/web.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="7" column="27" lean-forward="true" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jsp File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/webapp/index.jsp" />
+        <option value="$PROJECT_DIR$/webapp/WEB-INF/web.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="108" />
+    <option name="y" value="68" />
+    <option name="width" value="1188" />
+    <option name="height" value="602" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="testMaven" type="b2602c69:ProjectViewProjectNode" />
+              <item name="testMaven" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="testMaven" type="b2602c69:ProjectViewProjectNode" />
+              <item name="testMaven" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="testMaven" type="b2602c69:ProjectViewProjectNode" />
+              <item name="testMaven" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.2063802" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.0.33" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="testMaven:Web exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/testMaven" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_testMaven" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="55805" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="testMaven:Web exploded" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3d816d55-3ef0-43b7-be2c-8037b33e4ed1" name="Default Changelist" comment="" />
+      <created>1566265359648</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1566265359648</updated>
+      <workItem from="1566265365132" duration="3281000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="3281000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Web" side_tool="true" />
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31996974" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Java Enterprise" />
+      <window_info anchor="bottom" id="Spring" />
+      <window_info anchor="bottom" id="Application Servers" weight="0.3295082" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3295082" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Maven Projects" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="58" column="21" lean-forward="true" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="19" selection-start-line="19" selection-end-line="19" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="27" lean-forward="true" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>testMaven:Web exploded</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Web|testMaven</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

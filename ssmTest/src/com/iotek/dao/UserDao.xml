@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.iotek.dao.UserDao">
+    <insert id="addUser">
+        <selectKey keyProperty="id" order="AFTER" resultType="integer">
+            SELECT last_insert_id()
+        </selectKey>
+        insert into user(name, pass)
+        values (#{name},#{pass})
+    </insert>
+    <select id="getUser" resultType="com.iotek.model.User">
+        select * from user
+        where name=#{name} and pass=#{pass}
+    </select>
+</mapper>
