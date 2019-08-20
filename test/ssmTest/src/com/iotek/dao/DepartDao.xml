@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.iotek.dao.DepartDao">
+    <delete id="delDepart">
+        delete from depart where id=#{id}
+    </delete>
+    <select id="getDepartById" resultType="com.iotek.model.Depart">
+        select * from depart where id=#{id}
+    </select>
+    <select id="getAllDepart" resultType="com.iotek.model.Depart">
+        select * from depart
+    </select>
+</mapper>
