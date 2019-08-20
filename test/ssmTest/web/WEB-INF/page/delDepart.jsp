@@ -23,6 +23,7 @@
     for (Depart depart : departList) {
 %>
 
+
 <span>ID:【<%=depart.getId()%>】</span>
 <span>Name:【<%=depart.getDname()%>】</span>
 <a href="delDepart?id=<%=depart.getId()%>">删除</a>
