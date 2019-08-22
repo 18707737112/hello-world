@@ -1,0 +1,180 @@
+1. 创建表，并插入所有数据
+1. 在oracle中创建表，并且插入数据
+CREATE TABLE EMP (
+  EMPNO NUMBER(5),
+  ENAME VARCHAR2(30),
+  JOB VARCHAR2(20),
+  MGR NUMBER(5),
+  HIREDATE DATE,
+  SAL NUMBER(6,2),
+  COMM NUMBER(6,2),
+  DEPTNO NUMBER(5)
+)
+INSERT INTO EMP VALUES (7369, 'SMITH', 'CLERK', 7902, TO_DATE('1980-12-17','YYYY-MM-DD'), 800,0,20);
+INSERT INTO EMP VALUES (7499, 'ALLEN', 'SALESMAN', 7698, TO_DATE('1981-02-20', 'YYYY-MM-DD'), 800,300,30);
+INSERT INTO EMP VALUES (7521, 'WARD', 'SALESMAN', 7698, TO_DATE('1981-02-22', 'YYYY-MM-DD'), 800,500,30);
+INSERT INTO EMP VALUES (7566, 'JONES', 'MANAGER', 7839, TO_DATE('1981-04-02', 'YYYY-MM-DD'), 800,0,20);
+INSERT INTO EMP VALUES (7654, 'MARTIN', 'SALESMAN', 7698, TO_DATE('1981-09-28', 'YYYY-MM-DD'), 800,1400,30);
+INSERT INTO EMP VALUES (7698, 'BLAKE', 'MANAGER', 7839, TO_DATE('1981-05-01', 'YYYY-MM-DD'), 800,0,30);
+INSERT INTO EMP VALUES (7782, 'CLARK', 'MANAGER', 7839, TO_DATE('1981-06-09', 'YYYY-MM-DD'), 800,0,10);
+INSERT INTO EMP VALUES (7788, 'SCOTT', 'ANALYET', 7566, TO_DATE('1987-04-19', 'YYYY-MM-DD'), 800,0,20);
+INSERT INTO EMP VALUES (7839, 'KING', 'PRESIDENT', 0000, TO_DATE('1981-11-17', 'YYYY-MM-DD'), 800,0,10);
+INSERT INTO EMP VALUES (7844, 'TURNER', 'SALESMAN', 7698, TO_DATE('1981-09-08', 'YYYY-MM-DD'), 800,0,30);
+INSERT INTO EMP VALUES (7876, 'ADAMS', 'CLERK', 7788, TO_DATE('1987-05-23', 'YYYY-MM-DD'), 800,0,20);
+INSERT INTO EMP VALUES (7900, 'JAMES', 'CLERK', 7698, TO_DATE('1981-12-03', 'YYYY-MM-DD'), 800,0,30);
+INSERT INTO EMP VALUES (7902, 'FORD', 'ANALYST', 7566, TO_DATE('1981-12-03', 'YYYY-MM-DD'), 800,0,20);
+INSERT INTO EMP VALUES (7934, 'MILLER', 'CLERK', 7782, TO_DATE('1982-01-23', 'YYYY-MM-DD'), 800,0,10);
+2. 找出每个月倒数第三天受雇的所有员工
+DECLARE
+  CURSOR cursor_emp is
+    select empno, ename, job,HIREDATE from EMP;
+  e_empno    EMP.EMPNO%type;
+  e_ename    EMP.ENAME%type;
+  e_job      EMP.JOB%type;
+  hiredate  EMP.HIREDATE%type;
+BEGIN
+  OPEN cursor_emp;
+  LOOP
+    FETCH cursor_emp into e_empno, e_ename, e_job, hiredate;
+    if(hiredate=LAST_DAY(hiredate)-2)then
+      dbms_output.put_line('employee No: ' || e_empno || '  employee Name: '|| e_ename || '  employee Position: ' || e_job);
+    end if ;
+    EXIT WHEN cursor_emp%NOTFOUND;
+  END LOOP ;
+  CLOSE cursor_emp;
+END ;
+3. 找出早于12年前受雇的员工
+DECLARE
+  CURSOR cursor_emp is
+    select empno, ename, job,HIREDATE from EMP;
+  e_empno    EMP.EMPNO%type;
+  e_ename    EMP.ENAME%type;
+  e_job      EMP.JOB%type;
+  hiredate  EMP.HIREDATE%type;
+BEGIN
+  OPEN cursor_emp;
+  LOOP
+    FETCH cursor_emp into e_empno, e_ename, e_job, hiredate;
+    if(MONTHS_BETWEEN(SYSDATE,hiredate)/12 > 12)then
+      dbms_output.put_line('employee No: ' || e_empno || '  employee Name: '|| e_ename || '  employee Position: ' || e_job);
+    end if ;
+    EXIT WHEN cursor_emp%NOTFOUND;
+  END LOOP ;
+  CLOSE cursor_emp;
+END ;
+4. 找出在(任何年份) 2 月受聘的所有员工
+DECLARE
+  CURSOR cursor_emp is
+    select empno, ename, job,HIREDATE from EMP;
+  e_empno    EMP.EMPNO%type;
+  e_ename    EMP.ENAME%type;
+  e_job      EMP.JOB%type;
+  hiredate  EMP.HIREDATE%type;
+BEGIN
+  OPEN cursor_emp;
+  LOOP
+    FETCH cursor_emp into e_empno, e_ename, e_job, hiredate;
+    if(TO_CHAR(hiredate,'mm')=2)then
+      dbms_output.put_line('employee No: ' || e_empno || '  employee Name: '|| e_ename || '  employee Position: ' || e_job);
+    end if ;
+    EXIT WHEN cursor_emp%NOTFOUND;
+  END LOOP ;
+  CLOSE cursor_emp;
+END ;
+5. 显示满 10 年服务年限的员工的姓名和受雇日期
+DECLARE
+  CURSOR cursor_emp is
+    select empno, ename, job,HIREDATE from EMP;
+  e_empno    EMP.EMPNO%type;
+  e_ename    EMP.ENAME%type;
+  e_job      EMP.JOB%type;
+  hiredate  EMP.HIREDATE%type;
+BEGIN
+  OPEN cursor_emp;
+  LOOP
+    FETCH cursor_emp into e_empno, e_ename, e_job, hiredate;
+    if(MONTHS_BETWEEN(SYSDATE,hiredate)/12 > 10)then
+      dbms_output.put_line('employee No: ' || e_empno || '  employee Name: '|| e_ename || '  employee Position: ' || e_job);
+    end if ;
+    EXIT WHEN cursor_emp%NOTFOUND;
+  END LOOP ;
+  CLOSE cursor_emp;
+END ;
+6. 显示员工的姓名和受雇日期，根据其服务年限，将最老的员工排在最前面
+DECLARE
+  CURSOR cursor_emp is
+    select empno, ename, job,HIREDATE from EMP ORDER BY hiredate ASC;
+  e_empno    EMP.EMPNO%type;
+  e_ename    EMP.ENAME%type;
+  e_job      EMP.JOB%type;
+  hiredate  EMP.HIREDATE%type;
+BEGIN
+  OPEN cursor_emp;
+  LOOP
+    FETCH cursor_emp into e_empno, e_ename, e_job, hiredate;
+
+    dbms_output.put_line('employee No: ' || e_empno || '  employee Name: '|| e_ename || '  employee Position: ' || e_job);
+
+    EXIT WHEN cursor_emp%NOTFOUND;
+  END LOOP ;
+  CLOSE cursor_emp;
+END ;
+7. 显示所有员工姓名、加入公司的年份和月份，按受雇日期所在月排序，若月份相同则将最早年份的员工排在最前面
+DECLARE
+  CURSOR cursor_emp is
+    SELECT empno,ename,job,TO_CHAR(hiredate,'YYYY') year,TO_CHAR(hiredate,'MM') months
+    FROM emp
+    ORDER By months,year;
+  e_empno EMP.EMPNO%type;
+  e_ename EMP.ENAME%type;
+  e_job EMP.JOB%type;
+  e_year varchar2(20);
+  e_months varchar2(20);
+BEGIN
+  OPEN cursor_emp;
+  LOOP
+    FETCH cursor_emp into e_empno,e_ename,e_job,e_year,e_months;
+    dbms_output.put_line('employee No: ' || e_empno || '  employee Name: '|| e_ename || '  employee Position: ' || e_job|| '  employee Year: '|| e_year || '  employee Months: ' || e_months);
+    EXIT WHEN cursor_emp%NOTFOUND;
+  END LOOP ;
+  CLOSE cursor_emp;
+END ;
+8. 显示在一个月为30天的情况所有员工的日薪金，忽略余数
+DECLARE
+  CURSOR cursor_emp is
+    SELECT ename,TRUNC(sal/30) FROM emp;
+  e_ename    EMP.ENAME%type;
+  e_sal EMP.SAL%TYPE;
+BEGIN
+  OPEN cursor_emp;
+  LOOP
+    FETCH cursor_emp into e_ename,e_sal;
+    dbms_output.put_line( e_ename||'----'||e_sal );
+    EXIT WHEN cursor_emp%NOTFOUND;
+  END LOOP ;
+  CLOSE cursor_emp;
+END ;
+9.  以年月日的方式显示所有员工的服务年限
+例如，现在有一位雇员“JONES”，他的雇佣日期是“02-4月 -81”（1981-04-02），今天的日期是2016-09-04，那么这位员工到今天为止的雇佣年限是：35年，05月，02天。
+DECLARE
+  CURSOR cursor_emp is
+    SELECT empno,ename,hiredate
+    FROM emp;
+  e_empno    EMP.EMPNO%type;
+  e_ename    EMP.ENAME%type;
+  e_hiredate EMP.hiredate%TYPE;
+  e_year     EMP.ENAME%type;
+  e_month    EMP.ENAME%type;
+  e_day       EMP.ENAME%type;
+BEGIN
+  OPEN cursor_emp;
+  LOOP
+    FETCH cursor_emp into e_empno, e_ename,e_hiredate;
+    e_year:= TRUNC(MONTHS_BETWEEN(SYSDATE,e_hiredate)/12);
+    e_month:=TRUNC(MOD(MONTHS_BETWEEN(SYSDATE,e_hiredate),12));
+    e_day:=TRUNC(SYSDATE-ADD_MONTHS(e_hiredate,MONTHS_BETWEEN(SYSDATE,e_hiredate)));
+    dbms_output.put_line('编号: ' || e_empno || '  姓名: '|| e_ename || '  年: ' || e_year|| '  月: ' || e_month|| '  日: ' || e_day);
+    EXIT WHEN cursor_emp%NOTFOUND;
+  END LOOP ;
+  CLOSE cursor_emp;
+END ;
