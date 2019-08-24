@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.iotek.dao.RecruitDao">
+    <insert id="addRecruit">
+        insert into T_RECRUIT
+        values (SEQ_RECRUIT.nextval,#{pos_id},#{rct_title},
+                #{rct_introducation},#{rct_is_publish},#{rct_address},
+                #{rct_salary},#{e_id},#{rct_is_draft},#{rct_is_publish})
+    </insert>
+    <update id="updateRecruit">
+        update T_RECRUIT
+        <set>
+            <if test="pos_id!=null">
+                pos_id=#{pos_id},
+            </if>
+            <if test="rct_title!=null">
+                rct_title=#{rct_title},
+            </if>
+            <if test="rct_introducation!=null">
+                rct_introducation=#{rct_introducation},
+            </if>
+            <if test="rct_is_publish!=null">
+                rct_is_publish=#{rct_is_publish},
+            </if>
+            <if test="rct_address!=null">
+                rct_address=#{rct_address},
+            </if>
+            <if test="rct_salary!=null">
+                rct_salary=#{rct_salary},
+            </if>
+            <if test="e_id!=null">
+                e_id=#{e_id},
+            </if>
+            <if test="rct_is_draft!=null">
+                rct_is_draft=#{rct_is_draft},
+            </if>
+            <if test="rct_is_publish!=null">
+                rct_is_publish=#{rct_is_publish},
+            </if>
+        </set>
+        <where>
+            <choose>
+                <when test="rct_id!=null and rct_id!=0">
+                    rct_id=#{rct_id}
+                </when>
+                <otherwise>
+                    1=1
+                </otherwise>
+            </choose>
+        </where>
+    </update>
+    <delete id="delRecruit">
+        delete from T_RECRUIT where RCT_ID=#{0}
+    </delete>
+    <select id="getRecruit" resultType="com.iotek.model.Recruit">
+        select * from T_RECRUIT
+        <where>
+            <choose>
+                <when test="rct_id!=null and rct_id!=0">
+                    rct_id=#{rct_id}
+                </when>
+                <when test="pos_id!=null and pos_id!=0">
+                    pos_id=#{pos_id}
+                </when>
+                <when test="e_id!=null and e_id!=0">
+                    e_id=#{e_id}
+                </when>
+                <when test="rct_is_draft==0 or rct_is_draft==1">
+                    rct_is_draft=#{rct_is_draft}
+                </when>
+                <when test="rct_is_publish==0 or rct_is_publish==1">
+                    rct_is_publish=#{rct_is_publish}
+                </when>
+                <otherwise>
+                    1=1
+                </otherwise>
+            </choose>
+        </where>
+    </select>
+</mapper>

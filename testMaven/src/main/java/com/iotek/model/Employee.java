@@ -5,7 +5,7 @@ import java.util.Date;
 
 //员工表
 public class Employee implements Serializable {
-    private int e_id;//ID
+    private Integer e_id;//ID
     private String e_account;//账号
     private String e_pass;//密码
     //private String e_type;//账号类型
@@ -15,27 +15,17 @@ public class Employee implements Serializable {
     private String e_phone;//电话
     private String e_debit;//银行卡号
     private Date e_enroll_date;//入职时间
-    private int e_state;//工作状态
-    private int e_salary;//薪资
+    private Integer e_state;//工作状态
+    private Integer e_salary;//薪资
 
     public Employee() {
     }
 
-    public Employee(String e_account, String e_pass, String e_name, char e_gender, String e_address, String e_phone, String e_debit, Date e_enroll_date, int e_state, int e_salary) {
-        this.e_account = e_account;
-        this.e_pass = e_pass;
-        this.e_name = e_name;
-        this.e_gender = e_gender;
-        this.e_address = e_address;
-        this.e_phone = e_phone;
-        this.e_debit = e_debit;
-        this.e_enroll_date = e_enroll_date;
-        this.e_state = e_state;
-        this.e_salary = e_salary;
-    }
-
-    public Employee(int e_id, String e_account, String e_pass, String e_name, char e_gender, String e_address, String e_phone, String e_debit, Date e_enroll_date, int e_state, int e_salary) {
+    public Employee(Integer e_id) {
         this.e_id = e_id;
+    }
+
+    public Employee(String e_account, String e_pass, String e_name, char e_gender, String e_address, String e_phone, String e_debit, Date e_enroll_date, Integer e_state, Integer e_salary) {
         this.e_account = e_account;
         this.e_pass = e_pass;
         this.e_name = e_name;
@@ -48,11 +38,11 @@ public class Employee implements Serializable {
         this.e_salary = e_salary;
     }
 
-    public int getE_id() {
+    public Integer getE_id() {
         return e_id;
     }
 
-    public void setE_id(int e_id) {
+    public void setE_id(Integer e_id) {
         this.e_id = e_id;
     }
 
@@ -120,19 +110,19 @@ public class Employee implements Serializable {
         this.e_enroll_date = e_enroll_date;
     }
 
-    public int getE_state() {
+    public Integer getE_state() {
         return e_state;
     }
 
-    public void setE_state(int e_state) {
+    public void setE_state(Integer e_state) {
         this.e_state = e_state;
     }
 
-    public int getE_salary() {
+    public Integer getE_salary() {
         return e_salary;
     }
 
-    public void setE_salary(int e_salary) {
+    public void setE_salary(Integer e_salary) {
         this.e_salary = e_salary;
     }
 

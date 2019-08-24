@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.iotek.dao.RewardDao">
+    <insert id="addReward">
+        insert into T_REWARD
+        values (SEQ_REWARD.nextval,#{e_id},#{r_date},#{r_reason},#{r_money})
+    </insert>
+    <update id="updateReward">
+        update T_REWARD
+        <set>
+            <if test="e_id!=null">
+                e_id=#{e_id},
+            </if>
+            <if test="r_date!=null">
+                r_date=#{r_date},
+            </if>
+            <if test="r_reason!=null">
+                r_reason=#{r_reason},
+            </if>
+            <if test="r_money!=null">
+                r_money=#{r_money},
+            </if>
+        </set>
+        <where>
+            <choose>
+                <when test="r_id!=null and r_id!=0">
+                    r_id=#{r_id}
+                </when>
+                <otherwise>
+                    1=1
+                </otherwise>
+            </choose>
+        </where>
+    </update>
+    <delete id="delReward">
+        delete from T_REWARD where R_ID=#{0}
+    </delete>
+    <select id="getReward" resultType="com.iotek.model.Reward">
+        select * from SEQ_REWARD
+        <where>
+            <choose>
+                <when test="r_id!=null and r_id!=0">
+                    r_id=#{r_id}
+                </when>
+                <when test="e_id!=null and e_id!=0">
+                    e_id=#{e_id}
+                </when>
+                <otherwise>
+                    1=1
+                </otherwise>
+            </choose>
+        </where>
+    </select>
+</mapper>

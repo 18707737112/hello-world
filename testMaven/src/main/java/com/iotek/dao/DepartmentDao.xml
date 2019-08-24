@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.iotek.dao.DepartmentDao">
+    <insert id="addDepartment">
+        insert into T_DEPARTMENT
+        values (SEQ_DEPARTMENT.nextval,#{dep_name},#{dep_date})
+    </insert>
+    <update id="updateDepartment">
+        update T_DEPARTMENT
+        <set>
+            <if test="dep_name!=null">
+                dep_name=#{dep_name},
+            </if>
+            <if test="dep_date!=null">
+                dep_date=#{dep_date},
+            </if>
+        </set>
+        <where>
+            <choose>
+                <when test="dep_id!=null and dep_id!=0">
+                    dep_id=#{dep_id}
+                </when>
+                <otherwise>
+                    1=1
+                </otherwise>
+            </choose>
+        </where>
+    </update>
+    <delete id="delDepartment">
+        delete from T_DEPARTMENT where DEP_ID=#{0}
+    </delete>
+    <select id="getDepartment" resultType="com.iotek.model.Department">
+        select * from T_DEPARTMENT
+        <where>
+            <choose>
+                <when test="dep_id!=null and dep_id!=0">
+                    dep_id=#{dep_id}
+                </when>
+                <when test="dep_name!=null and dem_name!=''">
+                    dep_name=#{dep_name}
+                </when>
+                <otherwise>
+                    1=1
+                </otherwise>
+            </choose>
+        </where>
+    </select>
+</mapper>

@@ -3,5 +3,89 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.iotek.dao.CvDao">
+    <insert id="addCv">
+        insert into T_CV
+        values (SEQ_CV.nextval,#{c_id},#{cv_name},#{cv_gender},#{cv_birth},
+                #{cv_address},#{cv_school},#{cv_education},#{cv_major},#{cv_enroll_date},
+                #{cv_graduation_date},#{cv_salary},#{cv_exprience},#{cvs_name})
+    </insert>
 
+    <update id="updateCv">
+        update T_CV
+        <set>
+            <if test="c_id!=null">
+                c_id=#{c_id},
+            </if>
+            <if test="cv_name!=null">
+                cv_name=#{cv_name},
+            </if>
+            <if test="cv_gender!=null">
+                cv_gender=#{cv_gender},
+            </if>
+            <if test="cv_birth!=null">
+                cv_birth=#{cv_birth},
+            </if>
+            <if test="cv_address!=null">
+                cv_address=#{cv_address},
+            </if>
+            <if test="cv_school!=null">
+                cv_school=#{cv_school},
+            </if>
+            <if test="cv_education!=null">
+                cv_education=#{cv_education},
+            </if>
+            <if test="cv_major!=null">
+                cv_major=#{cv_major},
+            </if>
+            <if test="cv_enroll_date!=null">
+                cv_enroll_date=#{cv_enroll_date},
+            </if>
+            <if test="cv_graduation_date!=null">
+                cv_graduation_date=#{cv_graduation_date},
+            </if>
+            <if test="cv_salary!=null">
+                cv_salary=#{cv_salary},
+            </if>
+            <if test="cv_exprience!=null">
+                cv_exprience=#{cv_exprience},
+            </if>
+            <if test="cvs_name!=null">
+                cvs_name=#{cvs_name},
+            </if>
+        </set>
+        <where>
+            <choose>
+                <when test="cv_id!=null and cv_id!=0">
+                    cv_id=#{cv_id}
+                </when>
+                <otherwise>
+                    1=1
+                </otherwise>
+            </choose>
+        </where>
+    </update>
+
+    <delete id="delCv">
+        delete from T_CV where C_ID=#{0}
+    </delete>
+
+    <select id="getCv" resultType="com.iotek.model.Cv">
+        select * from T_CV
+        <where>
+            <choose>
+                <when test="cv_id!=null and cv_id!=0">
+                    cv_id=#{cv_id}
+                </when>
+                <when test="c_id!=null and c_id!=0">
+                    c_id=#{c_id}
+                </when>
+                <when test="cvs_name!=null and cvs_name!=''">
+                    cvs_name=#{cvs_name}
+                </when>
+                <otherwise>
+                    1=1
+                </otherwise>
+            </choose>
+        </where>
+    </select>
 </mapper>

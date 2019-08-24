@@ -3,9 +3,10 @@ package com.iotek.model;
 import java.io.Serializable;
 import java.util.Date;
 
+//简历表
 public class Cv implements Serializable {
-    private int cv_id;//ID
-    private int c_id;//游客ID
+    private Integer cv_id;//ID
+    private Integer c_id;//游客ID
     private String cv_name;//姓名
     private char cv_gender;//性别
     private Date cv_birth;//出生年月
@@ -17,27 +18,16 @@ public class Cv implements Serializable {
     private Date cv_graduation_date;//毕业时间
     private String cv_salary;//期望薪资
     private String cv_exprience;//经历
+    private String cvs_name;//简历名称
 
     public Cv() {
     }
 
-    public Cv(int c_id, String cv_name, char cv_gender, Date cv_birth, String cv_address, String cv_school, String cv_education, String cv_major, Date cv_enroll_date, Date cv_graduation_date, String cv_salary, String cv_exprience) {
-        this.c_id = c_id;
-        this.cv_name = cv_name;
-        this.cv_gender = cv_gender;
-        this.cv_birth = cv_birth;
-        this.cv_address = cv_address;
-        this.cv_school = cv_school;
-        this.cv_education = cv_education;
-        this.cv_major = cv_major;
-        this.cv_enroll_date = cv_enroll_date;
-        this.cv_graduation_date = cv_graduation_date;
-        this.cv_salary = cv_salary;
-        this.cv_exprience = cv_exprience;
-    }
-
-    public Cv(int cv_id, int c_id, String cv_name, char cv_gender, Date cv_birth, String cv_address, String cv_school, String cv_education, String cv_major, Date cv_enroll_date, Date cv_graduation_date, String cv_salary, String cv_exprience) {
+    public Cv(Integer cv_id) {
         this.cv_id = cv_id;
+    }
+
+    public Cv(Integer c_id, String cv_name, char cv_gender, Date cv_birth, String cv_address, String cv_school, String cv_education, String cv_major, Date cv_enroll_date, Date cv_graduation_date, String cv_salary, String cv_exprience, String cvs_name) {
         this.c_id = c_id;
         this.cv_name = cv_name;
         this.cv_gender = cv_gender;
@@ -50,21 +40,22 @@ public class Cv implements Serializable {
         this.cv_graduation_date = cv_graduation_date;
         this.cv_salary = cv_salary;
         this.cv_exprience = cv_exprience;
+        this.cvs_name = cvs_name;
     }
 
-    public int getCv_id() {
+    public Integer getCv_id() {
         return cv_id;
     }
 
-    public void setCv_id(int cv_id) {
+    public void setCv_id(Integer cv_id) {
         this.cv_id = cv_id;
     }
 
-    public int getC_id() {
+    public Integer getC_id() {
         return c_id;
     }
 
-    public void setC_id(int c_id) {
+    public void setC_id(Integer c_id) {
         this.c_id = c_id;
     }
 
@@ -156,9 +147,17 @@ public class Cv implements Serializable {
         this.cv_exprience = cv_exprience;
     }
 
+    public String getCvs_name() {
+        return cvs_name;
+    }
+
+    public void setCvs_name(String cvs_name) {
+        this.cvs_name = cvs_name;
+    }
+
     @Override
     public String toString() {
-        return "HRM_cv{" +
+        return "Cv{" +
                 "cv_id=" + cv_id +
                 ", c_id=" + c_id +
                 ", cv_name='" + cv_name + '\'' +
@@ -172,6 +171,7 @@ public class Cv implements Serializable {
                 ", cv_graduation_date=" + cv_graduation_date +
                 ", cv_salary='" + cv_salary + '\'' +
                 ", cv_exprience='" + cv_exprience + '\'' +
+                ", cvs_name='" + cvs_name + '\'' +
                 '}';
     }
 }

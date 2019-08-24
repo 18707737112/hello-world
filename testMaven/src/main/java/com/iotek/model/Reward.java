@@ -5,43 +5,39 @@ import java.sql.Date;
 
 //奖惩表
 public class Reward implements Serializable {
-    private int r_id;//ID
-    private int e_id;//员工ID
+    private Integer r_id;//ID
+    private Integer e_id;//员工ID
     private Date r_date;//时间
     private String r_reason;//原因
-    private int r_money;//金额
+    private Integer r_money;//金额
 
     public Reward() {
     }
 
-    public Reward(int e_id, Date r_date, String r_reason, int r_money) {
-        this.e_id = e_id;
-        this.r_date = r_date;
-        this.r_reason = r_reason;
-        this.r_money = r_money;
-    }
-
-    public Reward(int r_id, int e_id, Date r_date, String r_reason, int r_money) {
+    public Reward(Integer r_id) {
         this.r_id = r_id;
+    }
+
+    public Reward(Integer e_id, Date r_date, String r_reason, Integer r_money) {
         this.e_id = e_id;
         this.r_date = r_date;
         this.r_reason = r_reason;
         this.r_money = r_money;
     }
 
-    public int getR_id() {
+    public Integer getR_id() {
         return r_id;
     }
 
-    public void setR_id(int r_id) {
+    public void setR_id(Integer r_id) {
         this.r_id = r_id;
     }
 
-    public int getE_id() {
+    public Integer getE_id() {
         return e_id;
     }
 
-    public void setE_id(int e_id) {
+    public void setE_id(Integer e_id) {
         this.e_id = e_id;
     }
 
@@ -61,11 +57,11 @@ public class Reward implements Serializable {
         this.r_reason = r_reason;
     }
 
-    public int getR_money() {
+    public Integer getR_money() {
         return r_money;
     }
 
-    public void setR_money(int r_money) {
+    public void setR_money(Integer r_money) {
         this.r_money = r_money;
     }
 

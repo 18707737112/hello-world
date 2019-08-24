@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.iotek.dao.AttendenceDao">
+    <insert id="addAttendence">
+        insert into T_ATTENDENCE
+        values (SEQ_ATTENDENCE.nextval,#{e_id},#{atd_start_time},#{atd_end_time})
+    </insert>
+    <update id="updateAttendence">
+        update T_ATTENDENCE
+        <set>
+            <if test="e_id!=null">
+                e_id=#{e_id},
+            </if>
+            <if test="atd_start_time!=null">
+                atd_start_time=#{atd_start_time},
+            </if>
+            <if test="atd_end_time!=null">
+                atd_end_time=#{atd_end_time},
+            </if>
+        </set>
+        <where>
+            <choose>
+                <when test="atd_id!=null and atd_id!=0">
+                    atd_id=#{atd_id}
+                </when>
+                <otherwise>
+                    1=1
+                </otherwise>
+            </choose>
+        </where>
+    </update>
+    <delete id="delAttendence">
+        delete from T_ATTENDENCE where ATD_ID=#{0}
+    </delete>
+    <select id="getAttendence" resultType="com.iotek.model.Attendence">
+        select * from T_ATTENDENCE
+        <where>
+            <choose>
+                <when test="atd_id!=null and atd_id!=0">
+                    atd_id=#{atd_id}
+                </when>
+                <when test="e_id!=null and e_id!=0">
+                    e_id=#{e_id}
+                </when>
+                <otherwise>
+                    1=1
+                </otherwise>
+            </choose>
+        </where>
+    </select>
+</mapper>

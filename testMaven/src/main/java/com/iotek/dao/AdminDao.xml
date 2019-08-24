@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.iotek.dao.AdminDao">
+    <insert id="addAdmin">
+        insert into T_ADMINISTRATOR
+        values (SEQ_ADMINISTRATOR.nextval,#{a_name},#{a_pass})
+    </insert>
+    <select id="getAdmin" resultType="com.iotek.model.Administrator">
+        select * from T_ADMINISTRATOR
+        <where>
+            <if test="a_pass!=null and a_pass!=''">
+                and a_pass=#{a_pass}
+            </if>
+            <if test="a_name!=null and a_name!=''">
+                and a_name=#{a_name}
+            </if>
+            <if test="a_id!=null and a_id!=0">
+                and a_id=#{a_id}
+            </if>
+        </where>
+    </select>
+</mapper>

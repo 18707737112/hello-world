@@ -5,34 +5,25 @@ import java.util.Date;
 
 //招聘表
 public class Recruit implements Serializable {
-    private int rct_id;//ID
-    private int pos_id;//职位ID
+    private Integer rct_id;//ID
+    private Integer pos_id;//职位ID
     private String rct_title;//主题
     private String rct_introducation;//职位描述
     private Date rct_publish_time;//发布时间
     private String rct_address;//地址
-    private int rct_salary;//薪资
-    private int e_id;//联系人ID
-    private int rct_is_draft;//是否为草稿
-    private int rct_is_publish;//是否发布
+    private Integer rct_salary;//薪资
+    private Integer e_id;//联系人ID
+    private Integer rct_is_draft;//是否为草稿
+    private Integer rct_is_publish;//是否发布
 
     public Recruit() {
     }
 
-    public Recruit(int pos_id, String rct_title, String rct_introducation, Date rct_publish_time, String rct_address, int rct_salary, int e_id, int rct_is_draft, int rct_is_publish) {
-        this.pos_id = pos_id;
-        this.rct_title = rct_title;
-        this.rct_introducation = rct_introducation;
-        this.rct_publish_time = rct_publish_time;
-        this.rct_address = rct_address;
-        this.rct_salary = rct_salary;
-        this.e_id = e_id;
-        this.rct_is_draft = rct_is_draft;
-        this.rct_is_publish = rct_is_publish;
-    }
-
-    public Recruit(int rct_id, int pos_id, String rct_title, String rct_introducation, Date rct_publish_time, String rct_address, int rct_salary, int e_id, int rct_is_draft, int rct_is_publish) {
+    public Recruit(Integer rct_id) {
         this.rct_id = rct_id;
+    }
+
+    public Recruit(Integer pos_id, String rct_title, String rct_introducation, Date rct_publish_time, String rct_address, Integer rct_salary, Integer e_id, Integer rct_is_draft, Integer rct_is_publish) {
         this.pos_id = pos_id;
         this.rct_title = rct_title;
         this.rct_introducation = rct_introducation;
@@ -44,19 +35,19 @@ public class Recruit implements Serializable {
         this.rct_is_publish = rct_is_publish;
     }
 
-    public int getRct_id() {
+    public Integer getRct_id() {
         return rct_id;
     }
 
-    public void setRct_id(int rct_id) {
+    public void setRct_id(Integer rct_id) {
         this.rct_id = rct_id;
     }
 
-    public int getPos_id() {
+    public Integer getPos_id() {
         return pos_id;
     }
 
-    public void setPos_id(int pos_id) {
+    public void setPos_id(Integer pos_id) {
         this.pos_id = pos_id;
     }
 
@@ -92,35 +83,35 @@ public class Recruit implements Serializable {
         this.rct_address = rct_address;
     }
 
-    public int getRct_salary() {
+    public Integer getRct_salary() {
         return rct_salary;
     }
 
-    public void setRct_salary(int rct_salary) {
+    public void setRct_salary(Integer rct_salary) {
         this.rct_salary = rct_salary;
     }
 
-    public int getE_id() {
+    public Integer getE_id() {
         return e_id;
     }
 
-    public void setE_id(int e_id) {
+    public void setE_id(Integer e_id) {
         this.e_id = e_id;
     }
 
-    public int getRct_is_draft() {
+    public Integer getRct_is_draft() {
         return rct_is_draft;
     }
 
-    public void setRct_is_draft(int rct_is_draft) {
+    public void setRct_is_draft(Integer rct_is_draft) {
         this.rct_is_draft = rct_is_draft;
     }
 
-    public int getRct_is_publish() {
+    public Integer getRct_is_publish() {
         return rct_is_publish;
     }
 
-    public void setRct_is_publish(int rct_is_publish) {
+    public void setRct_is_publish(Integer rct_is_publish) {
         this.rct_is_publish = rct_is_publish;
     }
 

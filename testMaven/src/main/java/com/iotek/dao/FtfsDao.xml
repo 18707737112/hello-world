@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.iotek.dao.FtfsDao">
+    <insert id="addFtfs">
+        insert into T_FTFS
+        values (SEQ_FTFS.nextval,#{cv_id},#{rct_id},#{f_date},
+                #{f_is_read},#{f_is_accept},#{f_is_agree})
+    </insert>
+    <update id="updateFtfs">
+        update T_FTFS
+        <set>
+
+        </set>
+        <where>
+            <choose>
+                <when test="f_id!=null and f_id!=0">
+                    f_id=#{f_id}
+                </when>
+                <otherwise>
+                    1=1
+                </otherwise>
+            </choose>
+        </where>
+    </update>
+    <delete id="delFtfs">
+        delete from T_FTFS where F_ID=#{0}
+    </delete>
+    <select id="getFtfs" resultType="com.iotek.model.Ftfs">
+        select * from T_FTFS
+        <where>
+            <choose>
+                <when test="f_id!=null and f_id!=0">
+                    f_id=#{f_id}
+                </when>
+                <when test="cv_id!=null and cv_id!=0">
+                    cv_id=#{cv_id}
+                </when>
+                <when test="rct_id!=null and rct_id!=0">
+                    rct_id=#{rct_id}
+                </when>
+                <otherwise>
+                    1=1
+                </otherwise>
+            </choose>
+        </where>
+    </select>
+</mapper>

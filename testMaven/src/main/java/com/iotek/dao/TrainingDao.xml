@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.iotek.dao.TrainingDao">
+    <insert id="addTraining">
+        insert into T_TRAINING
+        values (SEQ_TRAINING.nextval,#{t_title},#{e_id},#{t_start_time},
+                #{t_end_time},#{t_address},#{t_is_publish})
+    </insert>
+    <update id="updateTraining">
+        update T_TRAINING
+        <set>
+            <if test="t_title!=null">
+                t_title=#{t_title},
+            </if>
+            <if test="e_id!=null">
+                e_id=#{e_id},
+            </if>
+            <if test="t_start_time!=null">
+                t_start_time=#{t_start_time},
+            </if>
+            <if test="t_end_time!=null">
+                t_end_time=#{t_end_time},
+            </if>
+            <if test="t_address!=null">
+                t_address=#{t_address},
+            </if>
+            <if test="t_is_publish!=null">
+                t_is_publish=#{t_is_publish},
+            </if>
+        </set>
+        <where>
+            <choose>
+                <when test="t_id!=null and t_id!=0">
+                    t_id=#{t_id}
+                </when>
+                <otherwise>
+                    1=1
+                </otherwise>
+            </choose>
+        </where>
+    </update>
+    <delete id="delTraining">
+        delete from T_TRAINING where T_ID=#{0}
+    </delete>
+    <select id="getTraining" resultType="com.iotek.model.Training">
+        select * from T_TRAINING
+        <where>
+            <choose>
+                <when test="t_id!=null and t_id!=0">
+                    t_id=#{t_id}
+                </when>
+                <when test="e_id!=null and e_id!=0">
+                    e_id=#{e_id}
+                </when>
+                <otherwise>
+                    1=1
+                </otherwise>
+            </choose>
+        </where>
+    </select>
+</mapper>
