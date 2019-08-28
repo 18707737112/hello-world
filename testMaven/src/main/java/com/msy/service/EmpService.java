@@ -1,4 +1,4 @@
-package com.iotek.service;
+package com.msy.service;
 
 public interface EmpService {
 }
