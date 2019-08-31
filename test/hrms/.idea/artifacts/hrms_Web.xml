@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="hrms:Web">
+    <output-path>$PROJECT_DIR$/out/artifacts/hrms_Web</output-path>
+    <root id="archive" name="hrms_Web.war">
+      <element id="artifact" artifact-name="hrms:Web exploded" />
+    </root>
+  </artifact>
+</component>
