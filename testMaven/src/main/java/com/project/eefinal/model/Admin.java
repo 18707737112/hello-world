@@ -5,8 +5,8 @@ import java.io.Serializable;
 //管理员
 public class Admin implements Serializable {
     private Integer id;
-    private String name;
-    private String pass;
+    private String name;  //账号
+    private String pass;  //密码
 
     public Admin() {
     }
